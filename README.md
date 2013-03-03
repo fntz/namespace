@@ -19,13 +19,13 @@ Or install it yourself as:
 
 # Usage
 
- == Define namespace with methods.
+## Define namespace with methods.
 
  * name - [Symbol] - namespace name,
 
- * block - []Block] with methods/
+ * block - []Block] with methods
 
-
+```ruby
   class SomeClass
     include Namespace
     extend  Namespace
@@ -41,10 +41,11 @@ Or install it yourself as:
   SomeClass.new.my_namespace.method_a # => 'method_a'
   # For class
   SomeClass.my_namespace.method_a # => 'method_a'
+```
+## Outer methods
 
- == Outer methods
  All *namespaces* can call outer methods.
-
+```ruby
     class SomeClass
       include Namespace
       extend  Namespace
@@ -61,10 +62,10 @@ Or install it yourself as:
     end
 
     SomeClass.new.my_namespace.method_a #=> outer
+```
 
-
- == Take all namespaces for class with `namespaces` method
-
+## Take all namespaces for class with `namespaces` method
+```ruby
   class SomeClass
     include Namespace
     extend  Namespace
@@ -78,11 +79,12 @@ Or install it yourself as:
   end
 
   SomeClass.new.namespaces # => [:a, :b, :c]
+```
 
+## Reopen namespace.
 
- ==Reopen namespace.
  You can reopen any namespace
-
+```ruby
   class SomeClass
     include Namespace
     extend  Namespace
@@ -97,11 +99,12 @@ Or install it yourself as:
 
   SomeClass.a.a # => 'a'
   SomeClass.a.b # => 'b'
+```
 
- ==Namespaces and Inheritance.
+##Namespaces and Inheritance.
 
  All namespaces from superclass available in subclasses.
-
+```ruby
   class SomeClass
     include Namespace
     extend  Namespace
@@ -118,11 +121,12 @@ Or install it yourself as:
   end
 
   SubSomeClass.a.a # => 'subclass'
+```
 
+##Namespaces with Rails.
 
- == Namespaces and Rails.
  It can be use for save scopes (for example).
-
+```ruby
   class Model < AR::B
     include Namespace
     extend  Namespace
@@ -135,7 +139,7 @@ Or install it yourself as:
 
   Model.lasts # => return from "lasts" scope
   Model.my_custom_scopes.lasts # => return from namespace scope, "lasts" scope will be override
-
+```
 
 
 ## Contributing
