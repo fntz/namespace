@@ -6,16 +6,22 @@ Method with the same name in different namespaces.
 ## Installation
 
 Add this line to your application's Gemfile:
-
+```ruby
     gem 'name_space'
-
+```
 And then execute:
-
+```ruby
     $ bundle
-
+```
 Or install it yourself as:
-
+```ruby
     $ gem install name_space
+```
+Require gem:
+```ruby
+   require 'namespace'
+```
+        
 
 # Usage
 
