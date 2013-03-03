@@ -70,7 +70,7 @@ Require gem:
     SomeClass.new.my_namespace.method_a #=> outer
 ```
 
-## Take all namespaces for class with `namespaces` method
+## Get all namespaces for class with `namespaces` method
 ```ruby
   class SomeClass
     include Namespace
