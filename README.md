@@ -7,7 +7,7 @@ Method with the same name in different namespaces.
 
 Add this line to your application's Gemfile:
 
-    gem 'namespace'
+    gem 'name_space'
 
 And then execute:
 
@@ -15,7 +15,7 @@ And then execute:
 
 Or install it yourself as:
 
-    $ gem install namespace
+    $ gem install name_space
 
 # Usage
 
@@ -23,7 +23,7 @@ Or install it yourself as:
 
  * name - [Symbol] - namespace name,
 
- * block - []Block] with methods
+ * block - [Block] with methods
 
 ```ruby
   class SomeClass
