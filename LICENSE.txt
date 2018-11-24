@@ -1,4 +1,4 @@
-Copyright (c) 2013 fntzr <fantazuor@gmail.com>
+Copyright (c) 2013-2018 fntz <mike.fch1@gmail.com>
 
 MIT License
 

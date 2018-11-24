@@ -130,9 +130,9 @@ describe Namespace do
     end
 
     it "return all method from namespace" do
-      D.a.nmethods.should    eq [:a, :b, :c]
+      D.a.nmethods.should    =~ [:a, :b, :c]
       D.b.nmethods.should    eq [:a]
-      D.new.a.nmethods.should eq [:a, :b, :c]
+      D.new.a.nmethods.should =~ [:a, :b, :c]
       D.new.b.nmethods.should    eq [:a]
     end
   end
